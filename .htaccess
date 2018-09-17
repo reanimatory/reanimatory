@@ -1,4 +1,4 @@
-DirectoryIndex index.htm
+DirectoryIndex index.html
 AddDefaultCharset UTF-8
 
 # BEGIN HTTPS Redirection
