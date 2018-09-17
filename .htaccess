@@ -1,4 +1,4 @@
-DirectoryIndex index.php
+DirectoryIndex index.htm
 AddDefaultCharset UTF-8
 
 # BEGIN HTTPS Redirection
@@ -7,6 +7,4 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # END HTTPS Redirection
 
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\..* [NC]
-RewriteRule ^(.*) http://www.%{HTTP_HOST}/$1 [R=301]
+
