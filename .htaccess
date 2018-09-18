@@ -1,10 +1,6 @@
 DirectoryIndex index.html
 AddDefaultCharset UTF-8
 
-RewriteCond %{QUERY_STRING} ^IBLOCK_ID=1&SECTION_ID=111$ [NC]
-RewriteRule ^dir/index\.html$ /new/sef/? [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^site\.com\.ua [NC,OR]
-RewriteCond %{HTTP:X-Forwarded-Proto} ^http$ [NC]
-RewriteRule ^(.*)$ https://reanimatory.cf$1 [R=301,L]
+RewriteCond %{SERVER_PORT} !^443 $
+RewriteRule ^(.*)$ https://reanimatory.cf/$1 [R=301,L]
 
