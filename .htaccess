@@ -1,6 +1,0 @@
-DirectoryIndex index.html
-AddDefaultCharset UTF-8
-
-RewriteCond %{SERVER_PORT} !^443 $
-RewriteRule ^(.*)$ https://reanimatory.cf/$1 [R=301,L]
-
