@@ -1,0 +1,214 @@
+ body{margin:0;overflow-x:hidden}
+header{width:100%;display:table;background-color:#002e5b;margin-bottom:35px}
+.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+@media (min-width: 1200px) { .container{max-width:1140px} }
+#logo{float:left;font-size:1.7rem;text-transform:uppercase;color:#fff;font-weight:500;text-decoration:none;padding:11px 0}
+nav{width:auto;float:right;margin-top:7px}
+nav ul{display:table;float:right;margin:0;padding:0}
+nav ul li{float:left;list-style-type:none}
+nav ul li:last-child{padding-right:0}
+nav ul li a{color:#fff;font-size:19px;padding:7px 19px;display:inline-block;text-decoration:none}
+nav ul li a:hover{background-color:#fff;color:#002e5b;text-decoration:underline}
+.toggle-menu ul{display:table;width:31px;margin-left:0;padding-left:0;margin:5px}
+.toggle-menu ul li{width:100%;height:3px;background-color:#e9f0f7;margin-bottom:4px;list-style:none}
+.toggle-menu ul li:last-child{margin-bottom:0} input[type=checkbox],label{display:none}
+@media only screen and (max-width: 967px) { 
+header{padding:20px 0} 
+#logo{padding:0} 
+input[type=checkbox]{position:absolute;top:-7777px;left:-7777px;background:none} input[type=checkbox]:focus{background:none} 
+label{float:right;display:inline-block;cursor:pointer;margin-right:25px} 
+input[type=checkbox]:checked ~ nav{display:block} nav{display:none;position:absolute;right:0;top:64px;background-color:#002e5b;padding:0;z-index:99} 
+nav ul{width:auto} 
+nav ul li{float:none;padding:0;width:100%;display:table} 
+nav ul li a{color:#FFF;font-size:15px;padding:10px 20px;display:block;border-bottom:1px solid rgba(225,225,225,0.1)} 
+} 
+@media only screen and (max-width: 360px) { 
+label{padding:5px 0} 
+#logo{font-size:1.1rem} 
+nav{top:47px} 
+}
+@font-face {
+    font-family: neucha Medium; /* Имя шрифта */
+    src: url(../fonts/neucha.otf); /* Путь к файлу со шрифтом */
+   } 
+ 
+   p {
+    font-family: Futura New Medium;
+   }
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 0;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+.class {
+     background-image: url(bg.gif);
+     background-size: 100%;
+}
+.foo {
+    background-image: url(bg-image.png);
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%; 
+    background-size: 100% 100%;
+} 
+
+.style1 {
+        background: url(images/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+.image {
+	position	: relative;
+	width		: 200%; /* for IE 6 */
+}
+
+h1 {
+	position	: absolute;
+	top		: 90px;
+	left		: 0;
+	width		: 100%;
+}
+.bulletsBlock:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ 
+.bulletsBlock > div {
+    width: 30%;
+    float: left;
+    background: rgba(0,0,0,0.3);
+    margin-left:5%;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15.7%;
+    cursor: pointer;
+    -webkit-transition:all 0.35s linear;
+    transition:all 0.35s linear;
+}
+ 
+.bulletsBlock > div:first-child {
+    margin-left:0;
+}
+ 
+/*Тень снизу у блока при наведении*/
+.bulletsBlock > div:hover {
+    -webkit-box-shadow: 0 35px 35px -35px #000000;
+    -moz-box-shadow: 0 35px 35px -35px #000000;
+    box-shadow: 0 35px 35px -35px #000000;
+}
+.bullet-item span{
+    line-height: 1.5em;
+    font-size: 12.5em;
+    color:#fff;
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    -webkit-transition:all 0.35s ease;
+    transition:all 0.35s ease;
+}
+ 
+/*Анимация иконки при наведении - уменьшение и сдвиг вверх*/
+.bulletsBlock > div:hover span.iconBullet{
+    line-height: 1.35em;
+    font-size: 10.625em;
+    top:-2.7%;
+}
+.titleBullet, .hideText {
+    position: absolute;
+    left:0;
+    bottom:0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    -webkit-transition:all 0.35s ease;
+    transition:all 0.35s ease;
+}
+ 
+.titleBullet {
+    line-height: 2.5em;
+    font-size: 2.1875em;
+    background:#3B3B3B;
+    z-index: 10;
+}
+ 
+.hideText {
+    line-height: 1.3em;
+    font-size: 1.25em;
+    padding: 1em 0;
+    background:blue;
+    font-weight: 300;
+    z-index: 8;
+    height: 50px;
+    -webkit-transition:all 0.35s linear 0.2s;
+    transition:all 0.35s linear 0.2s;
+}
+/*Анимация при наведении видимого текстового блока*/
+.bulletsBlock > div:hover p.titleBullet{
+    bottom:80px;
+}
+ 
+/*Анимация при наведении скрытого текстового блока*/
+.bulletsBlock > div:hover p.hideText{
+    background:#454545;
+}
+.div img{
+    width:100%;
+}
+.layer1 {
+    background-color: #fc0; /* Цвет фона слоя */
+    padding: 5px; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: 200px; /* Ширина слоя */
+   }
+   .layer2 {
+    background-color: #c0c0c0; /* Цвет фона слоя */
+    padding: 5px; /* Поля вокруг текста */
+    width: 300px; /* Ширина слоя */
+    float: left; /* Обтекание по правому краю */
+   }
+   .clear {
+    clear: left; /* Отмена обтекания */
+   }
+div { box-sizing: border-box; }
+.my_boks {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.my_boks1, .my_boks2, .my_boks3 {
+	margin: 10px;
+	padding: 20px 10px;
+	width: calc(33% - 24px);
+	display: inline-block;
+}
+.my_boks1 { background-color: yellow; border: 3px dotted black; }
+.my_boks2 { background-color: #b1eab1; border: 3px dotted #61bd62; }
+.my_boks3 { background-color: #bebee9; border: 3px dotted #616fbd; }
+/* кнопка */
+.gpr-button {display:inline-block; padding:10px 18px;font-weight:normal;position:relative;z-index:1; font-size:20px; background: #4DBCE9; color: black; text-decoration: none !important; transition:all .5s}
+.gpr-button:after{content:''; position:absolute; top:0; left:0; z-index:-1; width:0; height:100%; background:blue; transition:all .5s}
+.gpr-button:hover {text-decoration: none; color:black!important}
+.gpr-button:hover:after{width:100%}
