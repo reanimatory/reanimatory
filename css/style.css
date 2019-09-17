@@ -84,131 +84,84 @@ h1 {
 	left		: 0;
 	width		: 100%;
 }
-.bulletsBlock:after {
-    content: "";
-    display: table;
-    clear: both;
-}
- 
-.bulletsBlock > div {
-    width: 30%;
-    float: left;
-    background: rgba(0,0,0,0.3);
-    margin-left:5%;
-    text-align: center;
-    position: relative;
-    padding-bottom: 15.7%;
-    cursor: pointer;
-    -webkit-transition:all 0.35s linear;
-    transition:all 0.35s linear;
-}
- 
-.bulletsBlock > div:first-child {
-    margin-left:0;
-}
- 
-/*Тень снизу у блока при наведении*/
-.bulletsBlock > div:hover {
-    -webkit-box-shadow: 0 35px 35px -35px #000000;
-    -moz-box-shadow: 0 35px 35px -35px #000000;
-    box-shadow: 0 35px 35px -35px #000000;
-}
-.bullet-item span{
-    line-height: 1.5em;
-    font-size: 12.5em;
-    color:#fff;
-    position: absolute;
-    top:0;
-    left:0;
-    display: block;
-    width: 100%;
-    -webkit-transition:all 0.35s ease;
-    transition:all 0.35s ease;
-}
- 
-/*Анимация иконки при наведении - уменьшение и сдвиг вверх*/
-.bulletsBlock > div:hover span.iconBullet{
-    line-height: 1.35em;
-    font-size: 10.625em;
-    top:-2.7%;
-}
-.titleBullet, .hideText {
-    position: absolute;
-    left:0;
-    bottom:0;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    color: #fff;
-    -webkit-transition:all 0.35s ease;
-    transition:all 0.35s ease;
-}
- 
-.titleBullet {
-    line-height: 2.5em;
-    font-size: 2.1875em;
-    background:#3B3B3B;
-    z-index: 10;
-}
- 
-.hideText {
-    line-height: 1.3em;
-    font-size: 1.25em;
-    padding: 1em 0;
-    background:blue;
-    font-weight: 300;
-    z-index: 8;
-    height: 50px;
-    -webkit-transition:all 0.35s linear 0.2s;
-    transition:all 0.35s linear 0.2s;
-}
-/*Анимация при наведении видимого текстового блока*/
-.bulletsBlock > div:hover p.titleBullet{
-    bottom:80px;
-}
- 
-/*Анимация при наведении скрытого текстового блока*/
-.bulletsBlock > div:hover p.hideText{
-    background:#454545;
-}
-.div img{
-    width:100%;
-}
-.layer1 {
-    background-color: #fc0; /* Цвет фона слоя */
-    padding: 5px; /* Поля вокруг текста */
-    float: left; /* Обтекание по правому краю */
-    width: 200px; /* Ширина слоя */
-   }
-   .layer2 {
-    background-color: #c0c0c0; /* Цвет фона слоя */
-    padding: 5px; /* Поля вокруг текста */
-    width: 300px; /* Ширина слоя */
-    float: left; /* Обтекание по правому краю */
-   }
-   .clear {
-    clear: left; /* Отмена обтекания */
-   }
-div { box-sizing: border-box; }
-.my_boks {
-    position: relative;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
+/* ------------- Контейнер с адаптивными блоками------------- */
+.masonry {
+    margin: 1.5em 0;
     padding: 0;
-    text-align: center;
+    column-gap: 1.5em; /* Общее расстояние между колонками */
+    font-size: .85em;
+    -moz-column-gap: 1.5em; /* Расстояние между колонками для Firefox */
+    -webkit-column-gap: 1.5em; /* Расстояние между колонками  для Safari, Chrome и iOS */
 }
-.my_boks1, .my_boks2, .my_boks3 {
-	margin: 10px;
-	padding: 20px 10px;
-	width: calc(33% - 24px);
-	display: inline-block;
+ 
+/* Элементы в виде плиток с содержанием */
+.item {
+    display: inline-block;
+    background: yellow;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box; /* Изменения алгоритма расчета ширины и высоты элемента.*/
+    -moz-box-sizing: border-box; /* Для Firefox */ 
+    -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */ 
+    box-shadow: 2px 2px 4px 0 #ccc; /* Внешняя тень плиток */
 }
-.my_boks1 { background-color: yellow; border: 3px dotted black; }
-.my_boks2 { background-color: #b1eab1; border: 3px dotted #61bd62; }
-.my_boks3 { background-color: #bebee9; border: 3px dotted #616fbd; }
-/* кнопка */
-.gpr-button {display:inline-block; padding:10px 18px;font-weight:normal;position:relative;z-index:1; font-size:20px; background: #4DBCE9; color: black; text-decoration: none !important; transition:all .5s}
-.gpr-button:after{content:''; position:absolute; top:0; left:0; z-index:-1; width:0; height:100%; background:blue; transition:all .5s}
-.gpr-button:hover {text-decoration: none; color:black!important}
-.gpr-button:hover:after{width:100%}
+ 
+/* Стили картинок, видое и фреймов внутри адаптивных плиток */
+img, iframe {
+max-width: 100%;
+height: auto;
+display: block;
+}
+ 
+/* Стили ссылок внутри плиток */
+.item a {
+text-decoration: none;
+color: #359CC6;
+margin: 0 10px;
+}
+ 
+/* Стили ссылок при наведении */
+.item a:hover {
+color: #E88F00;    
+border-bottom: 1px dotted #9F1D35;
+}
+ 
+/* Медиа-запросы для различных размеров адаптивного макета */
+@media only screen and (min-width: 400px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+ 
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+ 
+@media only screen and (min-width: 900px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+ 
+@media only screen and (min-width: 1100px) {
+    .masonry {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+}
+ 
+@media only screen and (min-width: 1280px) {
+    .wrapper {
+        width: 1260px;
+    }
+}
