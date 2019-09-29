@@ -165,3 +165,22 @@ border-bottom: 1px dotted #9F1D35;
         width: 1260px;
     }
 }
+details {
+border: 1px solid #999;
+border-radius: 5px;
+margin: 0 2em .4em 2em;
+padding: 1.04%;
+}
+ 
+details {
+margin: 1em;
+cursor: pointer;
+}
+ 
+summary {
+border-radius: 5px;
+cursor: pointer;
+margin: -1%;
+padding: 8px 10px;
+background: -webkit-linear-gradient(top, #f3f3f3 50%, #e6e6e6 50%);
+}
