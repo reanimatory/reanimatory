@@ -387,8 +387,8 @@ box {
 /*Стили для обертки*/
 .wrap{
   position:absolute;
-  width:100%;
-  height:100%;
+  width:450px;
+  height:480px;
   left:0;
   top:0;
   display:flex; /*Это сделано чтобы карточка была розмещена по центру*/
@@ -407,8 +407,8 @@ box {
  
 .front, .back{
   position:absolute;
-  width:100%;
-  height:100%;
+  width:450px;
+  height:480px;
   left:0;
   top:0;
   display:flex;
