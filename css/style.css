@@ -398,8 +398,8 @@ box {
  
 /*Оформляем саму карточку*/
 .cart {
-  width:550px;
-  height: 675px;
+  width:450px;
+  height: 480px;
   position:relative;
   perspective: 1000px; /*Добавляем эффект 3D*/
  
