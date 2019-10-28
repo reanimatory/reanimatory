@@ -373,3 +373,60 @@ a.button9:hover {
 a.button9:active {
   top: 1px;
 }
+/*Карточка товара*/
+.catalog {
+  font: .75em/1.25 sans-serif;
+  display: flex;
+  align-items: baseline;
+}
+
+.item {
+  flex: 1;
+  padding: .5em;
+}
+
+.item:hover {
+  outline: 1px dashed #ccb;
+}
+
+.old-price, small {
+  color: #888;
+  font-size: .9em;
+}
+.price {
+  color: red;
+  background: none;
+  font: bold 1.25em/1 sans-serif;
+}
+
+.best, .new, .action {
+  font: .9em/1 sans-serif;
+  text-align: right;
+}
+.best { color: white; }
+.new { color: white; }
+.action { color: white; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 1em 0 0;
+  color: white;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  margin: 0.5em 0 0;
+  border-bottom: 2px solid rgba(255,0,0,.3);
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+} 
+
+
+
+
+
+  
