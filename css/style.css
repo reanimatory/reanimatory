@@ -375,7 +375,7 @@ a.button9:active {
 }
 /*Карточка товара*/
 .catalog {
-  font: .4em/1.25 sans-serif;
+  font: .5em/1.25 sans-serif;
   display: flex;
   align-items: baseline;
 }
