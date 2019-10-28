@@ -407,18 +407,7 @@ a.button9:active {
 .new { color: white; }
 .action { color: white; }
 
-h2 {
-  font-size: 1.5em;
-  margin: 1em 0 0;
-  color: white;
-}
 
-h2::after {
-  content: '';
-  display: block;
-  margin: 0.5em 0 0;
-  border-bottom: 2px solid rgba(255,0,0,.3);
-}
 
 header {
   display: inline-block;
